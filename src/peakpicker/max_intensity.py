@@ -187,7 +187,7 @@ def apply_mask(mat, mask: np.ndarray, new_value: int = 0) -> np.ndarray:
 
 @njit
 @cc.export('max_intensity_uint64', 'u8[:,:](u8[:,:],u8,u8,f8,f8,f8)')
-@cc.export('max_intensity_float64', 'f8[:,:](f8[:,:],u8,u8,f8,f8,f8)')
+@cc.export('max_intensity_float64', 'u8[:,:](f8[:,:],u8,u8,f8,f8,f8)')
 def max_intensity(
         mat: np.ndarray,
         n: int = 10,
@@ -223,7 +223,7 @@ def max_intensity(
 
     """
     mat = np.copy(mat)
-    pos = np.empty((n, 2), dtype=mat.dtype)  # x, y
+    pos = np.empty((n, 2), dtype="uint64")  # x, y
     for i in range(n):
         # get max peak index
         max_ = np.argmax(mat, axis=None)
