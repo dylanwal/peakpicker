@@ -6,7 +6,7 @@ Notes
 -----
 * We will use PIL to import the PNG and then convert it to a gray scale image. The gray scale image is then converted
 into a numpy array for analysis.
-* To view the image and the peaks, we will use plotly. A helper plotting function can be found in plotting_utils.py file.
+* To view the image and the peaks, we will use plotly. A helper plotting function can be found in data_structures.py file.
 
 """
 
@@ -18,7 +18,7 @@ config.DISABLE_JIT = True  # must be above peakpicker import
 import plotly.graph_objs as go  # pip install plotly
 
 import peakpicker
-from utils import image_to_fig, transform_points
+from plotting_utils import image_to_fig, transform_points
 
 
 img = Image.open("./data/example2.png")

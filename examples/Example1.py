@@ -19,8 +19,8 @@ matrix[80, 50] = 30
 matrix[24:26, 70:73] = 25
 
 # Run python version
-peaks = peakpicker.max_intensity(mat=matrix, n=3, mask_type=1, d1=5, cut_off=11)
-print(peaks)
+# peaks = peakpicker.max_intensity(mat=matrix, n=3, mask_type=1, d1=5, cut_off=11)
+# print(peaks)
 
 # Run pre-compiled version
 peaks = peakpicker2.max_intensity(mat=matrix, n=3, mask_type=1, d1=5, cut_off=11)

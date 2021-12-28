@@ -3,7 +3,7 @@ from scipy.signal import find_peaks
 from sklearn.cluster import DBSCAN
 from sklearn.neighbors import LocalOutlierFactor
 
-from .plotting_utils import DynamicArray
+from .data_structures import DynamicArray
 
 
 def get_potential_peaks(mat: np.ndarray, axis: int = 0, **kwargs) -> np.ndarray:
